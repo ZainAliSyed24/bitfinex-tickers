@@ -1,11 +1,12 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { Text, View } from 'react-native';
+import { View } from 'react-native';
+import { HomeScreen } from './src/pages';
 
 export default function App() {
   return (
     <View style={{ flex: 1 }}>
-      <Text>Open up App.tsx to start working on your app!</Text>
+      <HomeScreen />
       <StatusBar style="auto" />
     </View>
   );
