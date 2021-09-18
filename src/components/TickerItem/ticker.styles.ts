@@ -19,3 +19,35 @@ export const Title = styled.Text`
   margin-bottom: 10px;
   color: ${(props) => props.theme.colors.primaryTextColor};
 `;
+
+export const CoinIcon = styled.Image`
+  width: 50px;
+  height: 50px;
+  margin:10px;
+`;
+
+export const Row = styled.View`
+  flex-direction: row;
+  align-items: center;
+`;
+
+export const Price = styled.Text`
+  font-weight: bold;
+  font-size: 14px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  color: ${(props) => props.theme.colors.primaryTextColor};
+`;
+
+export const Volume = styled.Text`
+  font-size: 14px;
+  color: ${(props) => props.theme.colors.primaryTextColor};
+`;
+
+export const Changes = styled.Text`
+  font-weight: bold;
+  font-size: 12px;
+  text-align: right;
+  margin-right: 10px;
+  color: ${(props:{isGreen:boolean}) => (props.isGreen ? 'green' : 'red')};
+`;
