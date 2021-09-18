@@ -1,4 +1,3 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { SafeAreaView } from 'react-native';
 import { ThemeProvider } from 'styled-components/native';
@@ -13,7 +12,6 @@ export default function App() {
       <ThemeProvider theme={theme}>
         <SafeAreaView style={{ flex: 1, backgroundColor: theme.colors.background }}>
           <HomeScreen />
-          <StatusBar style="auto" />
         </SafeAreaView>
       </ThemeProvider>
     </QueryClientProvider>

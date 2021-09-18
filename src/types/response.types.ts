@@ -1,1 +1,1 @@
-export type ResponseType=string|number[];
+export type ResponseType=(string|number)[];
