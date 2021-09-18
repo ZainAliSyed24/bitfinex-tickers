@@ -2,7 +2,8 @@
     "env": {
         "browser": true,
         "es2021": true,
-        "node": true
+        "node": true,
+        "jest": true
     },
     "extends": [
         "plugin:react/recommended",
@@ -18,8 +19,27 @@
     },
     "plugins": [
         "react",
-        "@typescript-eslint"
+        "@typescript-eslint",
+        "react-hooks"
     ],
     "rules": {
+        "react/jsx-filename-extension": [2, {
+            "extensions": [
+                ".tsx"
+            ]
+        }],
+        "import/extensions": [0],
+        "import/no-unresolved": [0],
+        "@typescript-eslint/no-unused-vars": [
+            "error"
+        ],
+        "react-hooks/exhaustive-deps": "error",
+        "max-len": [0],
+        "no-use-before-define": "off",
+        "react/style-prop-object": "off",
+        "@typescript-eslint/no-use-before-define": ["error"],
+        "react/jsx-props-no-spreading": "off",
+        "no-param-reassign": ["error", { "props": true, "ignorePropertyModificationsFor": ["state"] }],
+        "import/prefer-default-export": "off"
     }
 }
