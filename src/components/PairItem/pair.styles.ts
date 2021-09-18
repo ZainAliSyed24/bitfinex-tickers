@@ -3,7 +3,7 @@ import styled from 'styled-components/native';
 export const PairItemWraper = styled.Pressable`
   padding: 10px;
   width: 90px;
-  height: 50px;
+  height: 40px;
   justify-content: center;
   align-items: center;
   margin: 5px;
