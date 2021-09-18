@@ -1,0 +1,22 @@
+{
+  "files": {
+    "app.js": "/bitfinex-tickers/static/js/app.6df3b97c.chunk.js",
+    "app.js.map": "/bitfinex-tickers/static/js/app.6df3b97c.chunk.js.map",
+    "runtime~app.js": "/bitfinex-tickers/static/js/runtime~app.4f38585d.js",
+    "runtime~app.js.map": "/bitfinex-tickers/static/js/runtime~app.4f38585d.js.map",
+    "static/js/2.9b2158f0.chunk.js": "/bitfinex-tickers/static/js/2.9b2158f0.chunk.js",
+    "static/js/2.9b2158f0.chunk.js.map": "/bitfinex-tickers/static/js/2.9b2158f0.chunk.js.map",
+    "favicon-16.png": "/bitfinex-tickers/favicon-16.png",
+    "favicon-32.png": "/bitfinex-tickers/favicon-32.png",
+    "favicon.ico": "/bitfinex-tickers/favicon.ico",
+    "index.html": "/bitfinex-tickers/index.html",
+    "manifest.json": "/bitfinex-tickers/manifest.json",
+    "serve.json": "/bitfinex-tickers/serve.json",
+    "static/js/2.9b2158f0.chunk.js.LICENSE.txt": "/bitfinex-tickers/static/js/2.9b2158f0.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime~app.4f38585d.js",
+    "static/js/2.9b2158f0.chunk.js",
+    "static/js/app.6df3b97c.chunk.js"
+  ]
+}
