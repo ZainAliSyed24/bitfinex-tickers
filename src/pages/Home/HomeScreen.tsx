@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { TickerList } from 'src/components';
+import { PairList, TickerList } from 'src/components';
 import { TickerType } from 'src/types';
 import { getAllTickers } from 'src/requests';
 import { useQuery } from 'react-query';
@@ -8,6 +8,8 @@ import { Container } from './home.styles';
 
 export default function HomeScreen() {
   const [tickers, setTickers] = useState<TickerType[]>([]);
+  const [pairs, setPairs] = useState<string[]>([]);
+  const [selectedPair, setSelectedPair] = useState<string>('BTC');
 
   const { data } = useQuery('tickers',
     () => getAllTickers().then((res) => res.json()));
@@ -15,13 +17,22 @@ export default function HomeScreen() {
   useEffect(() => {
     if (data) {
       const result = parseResponseData(data);
-      setTickers(result);
+      setTickers(result.tickers);
+      setPairs(result.pairs);
     }
   }, [data]);
 
   return (
     <Container>
-      <TickerList tickers={tickers} />
+      <PairList
+        pairs={pairs}
+        onSelectPair={setSelectedPair}
+        selectedPair={selectedPair}
+      />
+      <TickerList
+        tickers={tickers}
+        selectedPair={selectedPair}
+      />
     </Container>
   );
 }

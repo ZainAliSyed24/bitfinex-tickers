@@ -2,6 +2,7 @@ import { TickerType, ResponseType } from 'src/types';
 
 export function parseResponseData(apiResponseData:ResponseType[]) {
   const tickers: TickerType[] = [];
+  let pairs:string[] = [];
   apiResponseData.forEach((responseItem) => {
     const symbol = responseItem[0].toString();
     // just show pair currency, not funding
@@ -19,7 +20,10 @@ export function parseResponseData(apiResponseData:ResponseType[]) {
         ticker.quoteAsset = ticker.symbol.substring(3, ticker.symbol.length);
       }
       tickers.push(ticker);
+      pairs.push(ticker.quoteAsset);
     }
   });
-  return tickers;
+  // distinct and sort pairs
+  pairs = [...new Set(pairs)].sort();
+  return { tickers, pairs };
 }
